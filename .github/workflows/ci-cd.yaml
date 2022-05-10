@@ -11,14 +11,14 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v3
-
+      
       - name: Setup .NET 5
         uses: actions/setup-dotnet@v2
         with:
           dotnet-version: '5.0.x'
 
-      - name: Restore dependencies 
-        run: dotnet restore 
-
-      - name: Build App
+      - name: Restore dependencies
+        run: dotnet restore
+      
+      - name: Build app
         run: dotnet build -c Release --no-restore
